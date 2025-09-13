@@ -1,6 +1,13 @@
+# Ejecucion
+* npm i
+* npx pod-install
 
-setting -> user JSON UI
-default color decora
+* npm run ios
+* npm run android
+
+# Colores del visual code
+* setting -> user JSON UI
+* default color decora
 
 # Conexion Android red wifi sin cable usb
 
