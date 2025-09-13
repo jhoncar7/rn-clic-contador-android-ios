@@ -1,45 +1,35 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// import { HelloWorldScreen } from './src/presentation/screens/HelloWorldScreen';
+// import { CounterScreen } from './src/presentation/screens/CounterScreen';
+import { PaperProvider } from 'react-native-paper';
+import { CounterM3Screen } from './src/presentation/screens/CounterM3Screen';
+import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Platform, View } from 'react-native';
+import Icon from "@react-native-vector-icons/ionicons";
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+const MyComponent = () => {
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  const insets = useSafeAreaInsets();
+  console.log(`[${Platform.OS}] Insets:`, insets);
 
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
+    <View style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom }}>
+      <PaperProvider
+        settings={{
+          icon: (props) => <Icon {...props} />
+        }}
+      >
+        {/* <HelloWorldScreen name='Jhon Jairo Carreno Lopez'/> */}
+        {/* <CounterScreen /> */}
+        <CounterM3Screen />
+      </PaperProvider>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+export const App = () => {
+  return (
+    <SafeAreaProvider style={{ flex: 1 }}>
+      <MyComponent />
+    </SafeAreaProvider>
+  )
+}
