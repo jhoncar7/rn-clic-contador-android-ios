@@ -1,3 +1,7 @@
+# Creacion de un nuevo proyecto
+* https://reactnative.dev/docs/getting-started-without-a-framework
+* npx @react-native-community/cli@latest init AwesomeProject
+
 # Ejecucion
 * npm i
 * npx pod-install
