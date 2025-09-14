@@ -5,6 +5,12 @@ import { CounterM3Screen } from './src/presentation/screens/CounterM3Screen';
 import { SafeAreaProvider, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Platform, View } from 'react-native';
 import Icon from "@react-native-vector-icons/ionicons";
+import { BoxObjectModelScreen } from './src/presentation/screens/BoxObjectModelScreen';
+import { DimensionScreen } from './src/presentation/screens/DimensionScreen';
+import { PositionScreen } from './src/presentation/screens/PositionScreen';
+import { FlexScreen } from './src/presentation/screens/FlexScreen';
+import { FlexDirectionScreen } from './src/presentation/screens/FlexDirectionScreen';
+import { HomeworkScreen } from './src/presentation/screens/HomeworkScreen';
 
 const MyComponent = () => {
 
@@ -20,7 +26,13 @@ const MyComponent = () => {
       >
         {/* <HelloWorldScreen name='Jhon Jairo Carreno Lopez'/> */}
         {/* <CounterScreen /> */}
-        <CounterM3Screen />
+        {/* <CounterM3Screen /> */}
+        {/* <BoxObjectModelScreen /> */}
+        {/* <DimensionScreen /> */}
+        {/* <PositionScreen /> */}
+        {/* <FlexScreen /> */}
+        {/* <FlexDirectionScreen /> */}
+        <HomeworkScreen />
       </PaperProvider>
     </View>
   );
@@ -28,7 +40,7 @@ const MyComponent = () => {
 
 export const App = () => {
   return (
-    <SafeAreaProvider style={{ flex: 1 }}>
+    <SafeAreaProvider>
       <MyComponent />
     </SafeAreaProvider>
   )
