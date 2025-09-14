@@ -26,13 +26,13 @@ const MyComponent = () => {
       >
         {/* <HelloWorldScreen name='Jhon Jairo Carreno Lopez'/> */}
         {/* <CounterScreen /> */}
-        {/* <CounterM3Screen /> */}
+        <CounterM3Screen />
         {/* <BoxObjectModelScreen /> */}
         {/* <DimensionScreen /> */}
         {/* <PositionScreen /> */}
         {/* <FlexScreen /> */}
         {/* <FlexDirectionScreen /> */}
-        <HomeworkScreen />
+        {/* <HomeworkScreen /> */}
       </PaperProvider>
     </View>
   );
